@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\soapy\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\soapy\\.nuget\\packages"
+    ]
+  }
+}
