@@ -1,19 +1,40 @@
 ﻿using System;
 
-namespace ConsoleTestApp
+namespace HomunculusGenerator
 {
     partial class Program
     {
         static void Main()
         {
             var duder = new Person();
-            var otherDude = new Person();
+
             PersonPrinter(duder);
             Console.WriteLine("");
-            PersonPrinter(otherDude);
-            Console.ReadKey(true);
+            Console.Write("Type "); Console.ForegroundColor = ConsoleColor.Blue; Console.Write("G"); Console.ResetColor(); Console.Write(" and hit enter to generate a person.");
+            Console.WriteLine("");
+            Console.Write("Type "); Console.ForegroundColor = ConsoleColor.Red; Console.Write("C"); Console.ResetColor(); Console.Write(" and hit enter to close the program.");
+            Console.WriteLine("");
+            Console.Write("Type "); Console.ForegroundColor = ConsoleColor.Green; Console.Write("anything else"); Console.ResetColor(); Console.Write(" to do nothing interesting with your time.");
+            Console.WriteLine("");
+            GetUserInput();
         }
 
+        static void GetUserInput()
+        {
+            var input = Console.ReadLine();
+            {
+                if (input == "G" || input == "g")
+                {
+                    Console.Clear();
+                    Main();
+                }
+                else if (input == "C" || input == "c")
+                {
+                    Environment.Exit(0);
+                }
+                else { GetUserInput(); }
+            }
+        }
         public static void PersonPrinter(Person p1)
         {
             // name
